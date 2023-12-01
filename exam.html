@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: gray;
+        }
+
+        .container {
+            display: grid;
+            background-color: gray;
+        }
+
+        nav>ul>h3 {
+            place-items: center;
+            color: #fff;
+            margin: 0;
+        }
+
+        img {
+            width: 23px;
+            position: absolute;
+        }
+
+        p {
+            display: inline;
+            margin-left: 25%;
+
+        }
+
+        .side-menu {
+            width: 200px;
+            background: #333;
+            color: white;
+            padding-top: 20px;
+            position: fixed;
+            height: 100vh;
+            -webkit-box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 1);
+            -moz-box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 1);
+            box-shadow: 6px 0px 5px -2px rgba(0, 0, 0, 1);
+        }
+
+        .side-menu ul {
+            list-style: none;
+            padding: 30px;
+            margin: 0;
+        }
+
+        .side-menu div {
+            text-decoration: none;
+            color: #fff;
+            padding: 10%;
+            margin-bottom: 6px;
+
+        }
+
+        .side-menu div:hover {
+            background-color: #555;
+        }
+
+        .side-menu .active div {
+            background-color: pink;
+        }
+
+        #content {
+            margin: 0;
+            margin-left: 200px;
+            padding: 20px;
+        }
+
+        .admin-panel {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        menu>div>div {
+            margin-left: 15px;
+            position: relative;
+            width: 80%;
+            padding: 21px;
+            background: rgb(53, 53, 53);
+            color: whitesmoke;
+        }
+
+        .p-secondary {
+            margin: 25px;
+            font-size: 11px;
+        }
+
+        #div-secondary {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        }
+
+        #storage {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        #shop {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        #fixed {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        #followers {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .sales {
+            display: flex;
+            font-size: 30px;
+        }
+
+        .hr-secondary {
+            width: 80%;
+        }
+
+        div>p:first-child {
+            margin: 0;
+        }
+
+        .admin-panel-adj div>p {
+            margin: 0;
+            margin-right: 25%;
+        }
+
+        menu>h2 {
+            padding: 10px;
+            color: #fff;
+        }
+
+        div #img {
+            background-color: darkgreen;
+            top: -20px;
+            padding: 20px;
+            width: 54px;
+        }
+
+        div #img1 {
+            background-color: peru;
+            top: -20px;
+            padding: 20px;
+            width: 54px;
+        }
+
+        div #img2 {
+            background-color: darkblue;
+            top: -20px;
+            padding: 20px;
+            width: 54px;
+        }
+
+        div #img3 {
+            background-color: darkred;
+            top: -20px;
+            padding: 20px;
+            width: 54px;
+        }
+
+        div #img4 {
+            background-color: darkgreen;
+            padding: 15px;
+            width: 93%;
+            top: -45px;
+            margin: 0;
+            position: relative;
+        }
+
+        div #img5 {
+            background-color: darkgoldenrod;
+            padding: 15px;
+            width: 93%;
+            top: -45px;
+            margin: 0;
+            position: relative;
+        }
+
+        div #img6 {
+            background-color: darkblue;
+            padding: 15px;
+            width: 93%;
+            top: -45px;
+            margin: 0;
+            position: relative;
+        }
+
+        .admin-panel-adj {
+            display: grid;
+            position: relative;
+            grid-template-columns: 1fr 1fr 1fr;
+            
+            min-height: 340px;
+            margin-top: 70px;
+        }
+
+        .div-adj-thirdly p{
+            padding: 30px;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="side-menu">
+            <ul>
+                <h3>Company</h3>
+            </ul>
+            <hr>
+            <ul>
+                <li class="active">
+                    <div>
+                        <img src="/Exam-Images/dashboard_white.svg" alt="Dashboard Image">
+                        <p>Dashboard</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="/Exam-Images/account_gray.svg" alt="User Image">
+                        <p>User Profile</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="/Exam-Images/map_gray.svg" alt="Map Image">
+                        <p>Maps</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="/Exam-Images/notify_gray.svg" alt="Notifications Image">
+                        <p>Notifications</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="/Exam-Images/support_gray.svg" alt="Support Image">
+                        <p>Support</p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <menu id="content">
+            <h2>Dashboard</h2>
+            <div class="admin-panel">
+                <!-- Storage -->
+                <div>
+                    <img id="img" src="/Exam-Images/data_white.svg" alt="">
+                    <div id="div-secondary">
+                        <p>Used Space</p>
+                        <p id="storage">49/50 GB</p>
+                    </div>
+                    <hr>
+                    <img src="/Exam-Images/alert.png">
+                    <p class="p-secondary">Get more space...</p>
+                </div>
+                <!-- Shop -->
+                <div>
+                    <img id="img1" src="/Exam-Images/shop_white.svg" alt="">
+                    <div id="div-secondary">
+                        <p>Revenue</p>
+                        <p id="shop">$ 34,245</p>
+                    </div>
+                    <hr>
+                    <img src="/Exam-Images/calendar.png">
+                    <p class="p-secondary">Last 24 Hours</p>
+                </div>
+                <!-- Fixed -->
+                <div>
+                    <img id="img2" src="/Exam-Images/tag_white.svg" alt="">
+                    <div id="div-secondary">
+                        <p>Fixed Issues</p>
+                        <p id="fixed">75</p>
+                    </div>
+                    <hr>
+                    <img src="/Exam-Images/down.png">
+                    <p class="p-secondary">Track from Github</p>
+                </div>
+                <!-- Followers -->
+                <div>
+                    <img id="img3" src="/Exam-Images/paperplane_white.svg" alt="">
+                    <div id="div-secondary">
+                        <p>Followers</p>
+                        <p id="followers">+245</p>
+                    </div>
+                    <hr>
+                    <img src="/Exam-Images/time.png">
+                    <p class="p-secondary">Just updated</p>
+                </div>
+                <!-- Daily Sales -->
+            </div>
+
+            <div class="admin-panel-adj">
+                <div>
+                    <img id="img4" src="/Exam-Images/graphics.svg" alt="Graphic Image Green">
+                    <div class="div-thirdly">
+                        <p class="sales">Daily Sales</p>
+                        <p>55% increase in today sales</p>
+                    </div>
+                    <hr>
+                    <div class="div-adj-thirdly">
+                        <img src="/Exam-Images/time.png" alt="time-img">
+                        <p>Get more space...</p>
+                    </div>
+                </div>
+
+                <div>
+                    <img id="img5" src="/Exam-Images/graphics.svg" alt="Graphic Image Green">
+                    <div class="div-thirdly">
+                        <p class="sales">Email Subscriptions</p>
+                        <p>Last Campaign Perfomance</p>
+                    </div>
+                    <hr>
+                    <div class="div-adj-thirdly">
+                        <img src="/Exam-Images/time.png" alt="time-img">
+                        <p>campaign sent 2 days ago</p>
+                    </div>
+                </div>
+
+                <div>
+                    <img id="img6" src="/Exam-Images/graphics.svg" alt="Graphic Image Green">
+                    <div class="div-thirdly">
+                        <p class="sales">Completed Task</p>
+                        <p>Last Campaign Perfomance</p>
+                    </div>
+                    <hr>
+                    <div class="div-adj-thirdly">
+                        <img src="/Exam-Images/time.png" alt="time-img">
+                        <p>campaign event 2 days ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-panel-third">
+                <div>
+
+                </div>
+                
+                <div>
+
+                </div>
+            </div>
+        </menu>
+    </div>
+</body>
+
+</html>
